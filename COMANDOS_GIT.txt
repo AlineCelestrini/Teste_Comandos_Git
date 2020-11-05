@@ -1,4 +1,4 @@
-testar merge /1
+testar merge branch 1
 
 testando
 
