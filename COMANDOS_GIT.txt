@@ -1,0 +1,64 @@
+testar merge
+
+
+
+COMANDOS GIT
+Estrutura mantida pelo GIT:
+Cada repositório local consiste em três árvores: o diretório de trabalho que contém os arquivos reais; 
+O índice que desempenha o papel de uma área de teste e o HEAD que é um ponteiro para o último commit feito pelo usuário. 
+Então, é assim que o fluxo de trabalho pode ser explicado: o usuário adiciona um arquivo ou alterações do diretório de trabalho para o índice (a área de teste) 
+e uma vez revistos, o arquivo ou as alterações são finalmente comprometidos com o HEAD.
+
+
+git init - Iniciando um Repositório
+git clone /path/to/local/repository - para repositorios locais
+git clone user.name@host:/path/to/remote/repository - repositorios remotos
+git add <nome_do_arquivo> - Alterações ou adições de arquivos
+git commit –m “Adicionar qualquer mensagem sobre o commit aqui” - fazer mudanças no HEAD
+git push origin master(ou branch desejada) - as mudanças presentes no HEAD são enviadas para o repositório remoto
+
+
+
+
+
+
+rm -rf .git - Apagando um repositório
+
+git status - Listando Arquivos Modificados
+
+Desfazendo Alterações:
+1 - git checkout . - usado quando ainda não executou git add
+2 - git reset - Se você executou git add e quer desfazer(remove arquivos do Stage)
+Para desfazer as modificações, após o reset use o checkout ou clean
+3 - git revert HEAD - desfaz o último commit, caso você tenha feito alterações e realizado um commit(Será criado um novo commit indicando que o último commit foi desfeito)
+
+git commit --amend - permite renomear a mensagem do último commit feito
+
+
+BRANCHES
+git branch - lista as branches do pc
+git --version - sabe a versao do git
+git branch -a - lista tb as branches remotas
+git checkout minha-branch - Para mudar para uma outra branch passando o nome da branch
+git checkout -b minha-nova-branch - cria uma nova
+git branch -d nome-da-branch - excluir uma branch local, ela só apaga a branch se você já tiver feito merge ou enviado as alterações para seu repositório remoto, evitando perda de código.
+git branch -D nome-da-branch - excluir uma branch local,  ignora o estado da sua branch, forçando a sua remoção.
+git branch -m novo-nome-da-branch - renomeia a branch atual local
+git checkout --orphan minha-branch-orfa - cria uma branch orfa
+
+
+git log - visualizar o histórico de commits
+git config -l - lista todas as configurações do seu Git.
+git config --global user.name "João Silva"
+git config --global user.email "exemplo@seuemail.com.br"
+
+
+
+STASH - podemos salvar alterações feitas mesmo sem precisar realizar um commit para depois voltar a trabalhar nela.
+git stash - Salvando modificações em um Stash
+
+
+
+
+
+
